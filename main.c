@@ -1,15 +1,25 @@
-#include <stdio.h>
-/* correction to the bugs in question one*/
-int x=1;
-/* its an error to use : when terminating a variable use ;*/
 
-int main()
+/*this is a header file do_it with returning a float
+with characters as list of parameters*/
+float do_it(char1,char2,char3)
+
+/*this function return any value*/
+void print_a_number (int x)
+
+
+#include<stdio.h>
+// alway terminate when u call a function
+void print_msg (void);
+main()
 {
-    if (x==1)/* an if condition is not terminated */
-        printf("x is equal to 1\n");
-        /*otherwise is not a C keyword instead use else */
-    else
-        printf("x does not equal \n1");
-
+    //the braces should be empty hence should not take any aguments
+print_msg();
 return 0;
+}
+    //the header function should be identical at any point when called
+void print_msg(void)
+{
+    puts("this is the message to print");
+
+    return 0;
 }
