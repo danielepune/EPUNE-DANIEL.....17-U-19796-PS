@@ -1,39 +1,61 @@
-
-// declarration for an array named data
-
-long data[50];
-
-// this assigning a float value to an array
-
-float data[49]=123.456;
-
-/*when a for loop is run then x values will range from 0 to 99*/
-int x
-for(x=0;x<100;x++)
-    printf("%d\n",x);
-
-//for is aloop hence we expect a range of values
-int ctr;
-for( ctr=2;ctr<10;ctr+=3)
-printf("%d\n", ctr);
-the values printed here will be 2,5,8
-
-// symantics of a while loop
-
 #include <stdio.h>
+#include <stdlib.h>
 
-int main()
+int array1[5]={1,2,3,4,5};
+int array2[5]={5,7,8,9,3};
+int array3[5];
+int i;
+void addarrays(array1,array2);
+main()
 {
-    int count=1;
-    while(count<=100)
-        {
-        printf("%d\n",count);
-        count+=3;
-        }
-    return 0;
+    for (i = 0; i < 5; i++)
+    printf( "\narray1 [%d] = %d \tarray2 [%d] = %d ", i,
+            array1 [i], i, array2 [i] );
+
+addarrays(array1,array2);
+
+return 0;
+}
+void addarrays(array1,array2)
+{
+    for (i = 0; i < 5; i++)
+    array3[i]=(array1 [i]+ array2[i]);
+
+    printf("\n\nARRAY3 sums up 2 and 1");
+    printf("\n.......................\n");
+
+    for (i = 0; i < 5; i++)
+    printf( "\narray3 arrays is = %d ", array3[i] );
+
+return 0;
 }
 
- the for (statement) should not be terminated
- i.e for(counter=1;counter< MAXVALUES;counter++)
-        printf("\n counter=%d", counter);
+part two
 
+#include <stdio.h>
+#include <stdlib.h>
+
+int array1[5]={1,2,3,4,5};
+int array2[5]={5,7,8,9,3};
+int array3[5];
+int i;
+void *addarrays(array1,array2);
+main()
+{
+    for (i = 0; i < 5; i++)
+    printf( "\narray1 [%d] = %d \tarray2 [%d] = %d ", i,
+            array1 [i], i, array2 [i] );
+
+int *array3=addarrays(array1,array2);
+
+    for (i = 0; i < 5; i++)
+    printf( "\narray3 arrays is = %d ", array3[i] );
+return 0;
+}
+void *addarrays(array1,array2)
+{
+    int *addarrays(array1,array2)
+    array3[i]=(array1 [i]+ array2[i])
+
+return 0;
+}
